@@ -1,0 +1,10 @@
+<html>
+    <body>
+        <h3>Add Record</h3>
+        <form method="post" action="/update/<%= userdata._id %>">
+            Name : <input type="text" value="<%= userdata.user_name %>" name="txt1"/>
+            Mobile : <input type="number" value="<%= userdata.user_mobile %>" name="txt2"/>
+            <input type="submit" />
+        </form>
+    </body>
+</html>

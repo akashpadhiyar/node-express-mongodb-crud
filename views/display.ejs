@@ -1,0 +1,23 @@
+<h2>Display</h2>
+<a href="/add">Add</a>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>Action</th>
+    </tr>
+
+    <%for(var i=0;i<userdata.length;i++){ %>
+        <tr>
+            <td><%= i+1 %></td>
+            
+            <td><%= userdata[i].user_name %></td>
+            <td><%= userdata[i].user_mobile %></td>
+            <td>
+                <a href="/edit/<%= userdata[i]._id  %>">Edit</a> |
+                <a href="/delete/<%= userdata[i]._id  %>">Delete</a>
+            </td>
+        </tr>
+        <% } %>
+</table>
